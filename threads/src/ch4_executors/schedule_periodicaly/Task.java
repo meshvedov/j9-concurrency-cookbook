@@ -1,0 +1,16 @@
+package ch4_executors.schedule_periodicaly;
+
+import java.util.Date;
+
+public class Task implements Runnable {
+    private final String name;
+
+    public Task(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void run() {
+        System.out.printf("%s: Executed at: %s\n", name, new Date());
+    }
+}
